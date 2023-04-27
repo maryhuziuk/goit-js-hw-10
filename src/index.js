@@ -16,9 +16,11 @@ function onInputPromise(event) {
   clearData();
 
   if (event.target.value.trim()) {
-    return fetchCountries(event.target.value.trim()).then(countries =>
-      renderResult(countries)
-    );
+    return fetchCountries(event.target.value.trim()).then(countries => {
+      if (countries) {
+        renderResult(countries);
+      }
+    });
   }
 }
 
