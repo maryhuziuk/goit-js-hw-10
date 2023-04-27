@@ -47,10 +47,8 @@ function renderResult(countries) {
       'Too many matches found. Please enter a more specific name.'
     );
   } else if (1 < countries.length) {
-    console.log('Found from 2 to 10');
     renderCountries(countries);
   } else {
-    console.log('Bingo');
     renderCountry(countries);
   }
 }
